@@ -10,7 +10,7 @@ class TestResetPage:
     def test_click_on_show_hide_pass_activates_field(self, driver):
         reset_page = ResetPage(driver)
         recovery_page = RecoveryPage(driver)
-        driver.get(TestData.MAIN_URL + TestData.RECOVERY_PASS_URL)
+        driver.get(TestData.BASE_URL + TestData.RECOVERY_PASS_URL)
         recovery_page.input_value_in_email_field('abc@ya.ru')
         recovery_page.click_on_recovery_btn()
         reset_page.click_on_show_hide_btn()

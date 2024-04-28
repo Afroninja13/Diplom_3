@@ -12,7 +12,7 @@ class TestRecoveryPage:
     def test_click_on_recovery_pass_btn_redirects_to_recovery_page(self, driver):
         login_page = LoginPage(driver)
         recovery_page = RecoveryPage(driver)
-        driver.get(TestData.MAIN_URL + TestData.LOGIN_URL)
+        driver.get(TestData.BASE_URL + TestData.LOGIN_URL)
         login_page.click_on_recovery_pass_btn()
         assert recovery_page.check_recovery_logo_text_is_displayed()
 
@@ -20,7 +20,7 @@ class TestRecoveryPage:
     def test_enter_email_value_and_click_on_recovery_btn(self, driver):
         reset_page = ResetPage(driver)
         recovery_page = RecoveryPage(driver)
-        driver.get(TestData.MAIN_URL + TestData.RECOVERY_PASS_URL)
+        driver.get(TestData.BASE_URL + TestData.RECOVERY_PASS_URL)
         recovery_page.input_value_in_email_field('abc@ya.ru')
         recovery_page.click_on_recovery_btn()
         assert reset_page.check_reset_logo_text_is_displayed()

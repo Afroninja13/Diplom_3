@@ -1,7 +1,7 @@
 
 
 class TestData:
-    MAIN_URL = 'https://stellarburgers.nomoreparties.site'
+    BASE_URL = 'https://stellarburgers.nomoreparties.site'
     LOGIN_URL = '/login'
     RECOVERY_PASS_URL = '/forgot-password'
     RESET_PASS_URL = '/reset-password'
